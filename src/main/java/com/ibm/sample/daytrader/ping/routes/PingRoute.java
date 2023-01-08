@@ -34,7 +34,7 @@ public class PingRoute extends RouteBuilder {
                 // HTTP: POST /api
                 .post()
                 .type(RequestType.class) // Setting the request type enables Camel to unmarshal the request to a Java object
-                .outType(ResponseType.class) // Setting the response type enables Camel to marshal the response to JSON
+                .outType(RequestType.class) // Setting the response type enables Camel to marshal the response to JSON
                 .to("bean:postBean");
 
     }
